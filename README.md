@@ -7,6 +7,11 @@ This is a Symfony Bundle to use [Symfony DoctrineFixturesBundle](https://symfony
 * [PHPUnit](https://phpunit.de/index.html)
 * (optional, but recommended) [Faker](https://fakerphp.org)
 
+## Install
+```shell
+composer require --dev dknx01/data-fixtures-phpunit
+```
+
 ## Usage
 If you want to use data fixtures in you tests you can do it in multiple ways.
 You can write a method to fill data in the database. or you can use a fixture and reuse it in multiple tests.
