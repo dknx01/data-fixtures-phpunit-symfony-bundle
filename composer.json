@@ -3,7 +3,6 @@
   "description": "Symfony Bundle to use Doctrine data fixtures in PHPUnit tests.",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "0.1.1",
   "type": "symfony-bundle",
   "keywords": [
     "Persistence",
