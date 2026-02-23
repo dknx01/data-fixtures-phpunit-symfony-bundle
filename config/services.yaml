@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../../../../vendor/symfony/dependency-injection/Loader/schema/services.schema.json
+when@test:
+  services:
+    _defaults:
+      autowire: true
+      autoconfigure: true
+      public: true
+    App\Tests\Fixtures\:
+      resource: '%kernel.project_dir%/tests/Fixtures'
+    Dknx01\DataFixturesPhpUnit\:
+      resource: '../src/*'
+      exclude:
+        - '../src/Exception'
+
+    Dknx01\DataFixturesPhpUnit\Fixture\FixtureHandler:
+      public: true
+    Dknx01\DataFixturesPhpUnit\Purger\PurgerCollection:
+      public: true

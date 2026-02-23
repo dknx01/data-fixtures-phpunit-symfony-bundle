@@ -1,0 +1,127 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\AnotherFixture\:\:\$faker is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: tests/Helper/AnotherFixture.php
+
+		-
+			message: '#^Call to an undefined method object\:\:handle\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Cannot access offset ''faker'' on array\|bool\|float\|int\|string\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Method Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureFailedTestCaseDummy\:\:getFixture\(\) should return Doctrine\\Common\\DataFixtures\\FixtureInterface but returns object\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Offset ''class'' might not exist on array\{function\: string, line\?\: int, file\?\: string, class\?\: class\-string, type\?\: ''\-\>''\|''\:\:'', args\?\: list\<mixed\>, object\?\: object\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 2
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureFailedTestCaseDummy\:\:\$fixtures \(list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: list\<string\>\}\>\) does not accept non\-empty\-list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: array\<string\>\}\>\.$#'
+			identifier: assign.propertyType
+			count: 2
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type object\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Call to an undefined method object\:\:handle\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Cannot access offset ''faker'' on array\|bool\|float\|int\|string\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Method Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureTestCaseDummy\:\:getFixture\(\) should return Doctrine\\Common\\DataFixtures\\FixtureInterface but returns object\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Offset ''class'' might not exist on array\{function\: string, line\?\: int, file\?\: string, class\?\: class\-string, type\?\: ''\-\>''\|''\:\:'', args\?\: list\<mixed\>, object\?\: object\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureTestCaseDummy\:\:\$fixtures \(list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: list\<string\>\}\>\) does not accept non\-empty\-list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: array\<string\>\}\>\.$#'
+			identifier: assign.propertyType
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type object\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FooFixture\:\:\$faker is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: tests/Helper/FooFixture.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\Config\\Definition\\NodeInterface\:\:getChildren\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: tests/Unit/DataFixturesPhpUnitBundleTest.php
+
+		-
+			message: '#^Call to an undefined method Faker\\Generator\:\:dummy\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: tests/Unit/Faker/FakerTraitTest.php
+
+		-
+			message: '#^Cannot access constant class on mixed\.$#'
+			identifier: classConstant.nonObject
+			count: 1
+			path: tests/Unit/Faker/FakerTraitTest.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_filter expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Unit/Faker/FakerTraitTest.php
+
+		-
+			message: '#^Parameter \#2 \$haystack of method PHPUnit\\Framework\\Assert\:\:assertCount\(\) expects Countable\|iterable, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Unit/Fixture/DataFixtureTraitTest.php
+
+		-
+			message: '#^Parameter \#1 \$purgers of class Dknx01\\DataFixturesPhpUnit\\Purger\\PurgerCollection constructor expects iterable\<Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator\>, array\<string, Doctrine\\Bundle\\FixturesBundle\\Purger\\PurgerFactory\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Unit/Fixture/FixtureHandlerTest.php
+
+		-
+			message: '#^Parameter \#1 \$purgers of class Dknx01\\DataFixturesPhpUnit\\Purger\\PurgerCollection constructor expects iterable\<Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator\>, ArrayIterator\<string, Doctrine\\Bundle\\FixturesBundle\\Purger\\PurgerFactory\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Unit/Purger/PurgerCollectionTest.php
