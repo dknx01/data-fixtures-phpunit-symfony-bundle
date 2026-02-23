@@ -1,0 +1,64 @@
+{
+  "name": "dknx01/data-fixtures-phpunit",
+  "description": "Symfony Bundle to use Doctrine data fixtures in PHPUnit tests.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "type": "symfony-bundle",
+  "keywords": [
+    "Persistence",
+    "Fixture",
+    "Tests"
+  ],
+  "authors": [
+    {
+      "name": "Dknx01",
+      "email": "ew1701-code@yahoo.de"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "doctrine/doctrine-fixtures-bundle": "^4.3",
+    "symfony/symfony": "7.4.*||8.*"
+  },
+  "require-dev": {
+    "ext-dom": "*",
+    "ext-xmlreader": "*",
+    "calebdw/fakerstan": "^1.2",
+    "ergebnis/composer-normalize": "^2.45",
+    "fakerphp/faker": "^1.24",
+    "friendsofphp/php-cs-fixer": "^v3.68",
+    "jangregor/phpstan-prophecy": "^2.2",
+    "phpspec/prophecy-phpunit": "^2.3",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-beberlei-assert": "^2.0",
+    "phpstan/phpstan-doctrine": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0",
+    "phpstan/phpstan-symfony": "^2.0",
+    "phpunit/phpunit": "^12.5",
+    "roave/security-advisories": "dev-latest",
+    "symfony/debug-bundle": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dknx01\\DataFixturesPhpUnit\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dknx01\\DataFixturesPhpUnit\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "ergebnis/composer-normalize": true,
+      "phpstan/extension-installer": true
+    },
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  }
+}
