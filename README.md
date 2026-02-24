@@ -8,6 +8,7 @@ This is a Symfony Bundle to use [Symfony DoctrineFixturesBundle](https://symfony
 * (optional, but recommended) [Faker](https://fakerphp.org)
 
 ## Install
+Create a config file (see [Minimal Configuration](#minimal-configuration))
 ```shell
 composer require --dev dknx01/data-fixtures-phpunit
 ```
@@ -28,6 +29,7 @@ data_fixtures_php_unit:
 ````
 `locale` and `providers` are optional and only needed if you want to change the default behavior.
 
+### Minimal Configuration
 The minimal setup would look like:
 ````yaml
 # config/packages/data_fixtures_php_unit.yaml
