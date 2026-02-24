@@ -8,10 +8,8 @@ This is a Symfony Bundle to use [Symfony DoctrineFixturesBundle](https://symfony
 * (optional, but recommended) [Faker](https://fakerphp.org)
 
 ## Install
-Create a config file (see [Minimal Configuration](#minimal-configuration))
-```shell
-composer require --dev dknx01/data-fixtures-phpunit
-```
+1. Create a config file (see [Minimal Configuration](#minimal-configuration))
+2. run `composer require --dev dknx01/data-fixtures-phpunit`
 
 ## Usage
 If you want to use data fixtures in you tests you can do it in multiple ways.
