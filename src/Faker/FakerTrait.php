@@ -25,6 +25,19 @@ trait FakerTrait
         }
     }
 
+    protected static function setFakerLocale(string $fakerLocale): void
+    {
+        self::$fakerLocale = $fakerLocale;
+    }
+
+    /**
+     * @param class-string[] $fakerProviders
+     */
+    protected static function setFakerProviders(array $fakerProviders): void
+    {
+        self::$fakerProviders = $fakerProviders;
+    }
+
     protected static function createFaker(): Generator
     {
         $faker = Factory::create(self::$fakerLocale);
