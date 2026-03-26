@@ -31,6 +31,18 @@ parameters:
 			path: tests/Helper/FixtureFailedTestCaseDummy.php
 
 		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, Doctrine\\Common\\DataFixtures\\FixtureInterface\|string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, object\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Helper/FixtureFailedTestCaseDummy.php
+
+		-
 			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureFailedTestCaseDummy\:\:\$fixtures \(list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: list\<string\>\}\>\) does not accept non\-empty\-list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: array\<string\>\}\>\.$#'
 			identifier: assign.propertyType
 			count: 2
@@ -67,6 +79,18 @@ parameters:
 			path: tests/Helper/FixtureTestCaseDummy.php
 
 		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, Doctrine\\Common\\DataFixtures\\FixtureInterface\|string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, object\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
 			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureTestCaseDummy\:\:\$fixtures \(list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: list\<string\>\}\>\) does not accept non\-empty\-list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: array\<string\>\}\>\.$#'
 			identifier: assign.propertyType
 			count: 2
@@ -77,6 +101,54 @@ parameters:
 			identifier: nullsafe.neverNull
 			count: 1
 			path: tests/Helper/FixtureTestCaseDummy.php
+
+		-
+			message: '#^Call to an undefined method object\:\:handle\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Cannot access offset ''faker'' on array\|bool\|float\|int\|string\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Method Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureTestCaseDummy2\:\:getFixture\(\) should return Doctrine\\Common\\DataFixtures\\FixtureInterface but returns object\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Offset ''class'' might not exist on array\{function\: string, line\?\: int, file\?\: string, class\?\: class\-string, type\?\: ''\-\>''\|''\:\:'', args\?\: list\<mixed\>, object\?\: object\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, Doctrine\\Common\\DataFixtures\\FixtureInterface\|string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, object\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FixtureTestCaseDummy2\:\:\$fixtures \(list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: list\<string\>\}\>\) does not accept non\-empty\-list\<array\{fixture\: Doctrine\\Common\\DataFixtures\\FixtureInterface, groups\: array\<string\>\}\>\.$#'
+			identifier: assign.propertyType
+			count: 2
+			path: tests/Helper/FixtureTestCaseDummy2.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type object\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: tests/Helper/FixtureTestCaseDummy2.php
 
 		-
 			message: '#^Property Dknx01\\DataFixturesPhpUnit\\Tests\\Helper\\FooFixture\:\:\$faker is never read, only written\.$#'

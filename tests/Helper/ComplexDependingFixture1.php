@@ -8,21 +8,12 @@
 namespace Dknx01\DataFixturesPhpUnit\Tests\Helper;
 
 use Dknx01\DataFixturesPhpUnit\Attributes\DependFixture;
-use Dknx01\DataFixturesPhpUnit\Contract\FakerAware;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Faker\Generator;
 
-#[DependFixture(Simple2Fixture::class)]
-class FooFixture implements FixtureInterface, FakerAware
+#[DependFixture(new ComplexDependingFixture2())]
+class ComplexDependingFixture1 implements FixtureInterface
 {
-    private Generator $faker;
-
-    public function setFaker(Generator $faker): void
-    {
-        $this->faker = $faker;
-    }
-
     public function load(ObjectManager $manager): void
     {
     }

@@ -8,6 +8,7 @@
 namespace Dknx01\DataFixturesPhpUnit\Exception;
 
 use Dknx01\DataFixturesPhpUnit\Attributes\DataFixture;
+use Dknx01\DataFixturesPhpUnit\Attributes\DependFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Exception;
 
@@ -15,7 +16,7 @@ use function sprintf;
 
 class FixtureAlreadyLoadedException extends Exception
 {
-    public function __construct(DataFixture $dataFixture)
+    public function __construct(DataFixture|DependFixture $dataFixture)
     {
         parent::__construct(sprintf(
             'Fixture "%s" already loaded. Multiple instances are not allowed.',
